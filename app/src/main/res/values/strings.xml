@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">HaVagas</string>
+    <string name="personal_tv">Informações pessoais</string>
+    <string name="fullname_et">Nome completo</string>
+    <string name="birthday_et">Data de nascimento</string>
+    <string name="sex_tv">Sexo</string>
+    <string name="contact_tv">Informações para contato</string>
+    <string name="email_et">E-mail</string>
+    <string name="receiveUpdates_cb">Receber atualizações por email</string>
+    <string name="telephone_et">Telefone</string>
+    <string name="commercial_rb">Comercial</string>
+    <string name="home_rb">Residencial</string>
+    <string name="addPhone_cb">Adicionar um número de telefone celular</string>
+    <string name="phone_et">Celular</string>
+    <string name="woman_rb">Feminino</string>
+    <string name="man_rb">Masculino</string>
+    <string name="training_tv">Formação</string>
+    <string-array name="training_sp">
+        <item>Selecione uma opção</item>
+        <item>Ensino fundamental</item>
+        <item>Ensino médio</item>
+        <item>Graduação</item>
+        <item>Especialização</item>
+        <item>Mestrado</item>
+        <item>Doutorado</item>
+    </string-array>
+    <string name="trainingDate_et">Data de formação</string>
+    <string name="conclusionDate_et">Data de conclusão</string>
+    <string name="institution_et">Instituição</string>
+    <string name="monographTitle_et">Título de monografia</string>
+    <string name="supervisor_et">Orientador</string>
+    <string name="jobs_tv">Vagas de interesse</string>
+    <string name="jobs_et">Vaga</string>
+    <string name="clear_bt">Limpar</string>
+    <string name="save_bt">Salvar</string>
+</resources>

@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/personalSessionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/personal_tv"
+            android:textAlignment="center"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/fullnameET"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:autofillHints="name"
+            android:hint="@string/fullname_et"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/personalSessionTV" />
+
+        <com.santalu.maskara.widget.MaskEditText
+            android:id="@+id/birthdayET"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:hint="@string/birthday_et"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fullnameET"
+            app:mask="__/__/____"
+            app:maskCharacter="_"
+            app:maskStyle="completable" />
+
+        <TextView
+            android:id="@+id/sexSessionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sex_tv"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/birthdayET" />
+
+        <RadioGroup
+            android:id="@+id/sexRG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sexSessionTV">
+
+            <RadioButton
+                android:id="@+id/womanRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/woman_rb" />
+
+            <RadioButton
+                android:id="@+id/manRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/man_rb" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/contactSessionTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_tv"
+            android:textAlignment="center"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sexRG" />
+
+        <EditText
+            android:id="@+id/emailET"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:autofillHints="emailAddress"
+            android:hint="@string/email_et"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/contactSessionTV" />
+
+        <CheckBox
+            android:id="@+id/receiveUpdatesCB"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginHorizontal="24dp"
+            android:text="@string/receiveUpdates_cb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/emailET"
+            tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+        <com.santalu.maskara.widget.MaskEditText
+            android:id="@+id/telephoneET"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:hint="@string/telephone_et"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/receiveUpdatesCB"
+            app:mask="(__) _____-____"
+            app:maskCharacter="_"
+            app:maskStyle="completable" />
+
+        <RadioGroup
+            android:id="@+id/telephoneTypeRG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/telephoneET">
+
+            <RadioButton
+                android:id="@+id/commercialRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/commercial_rb" />
+
+            <RadioButton
+                android:id="@+id/homeRB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_rb" />
+        </RadioGroup>
+
+        <CheckBox
+            android:id="@+id/addPhoneCB"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:layout_marginHorizontal="24dp"
+            android:text="@string/addPhone_cb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/telephoneTypeRG"
+            tools:ignore="TextSizeCheck,TouchTargetSizeCheck" />
+
+        <LinearLayout
+            android:id="@+id/phoneBoxLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addPhoneCB">
+
+            <com.santalu.maskara.widget.MaskEditText
+                android:id="@+id/phoneET"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="@string/phone_et"
+                android:inputType="number"
+                app:mask="(__) _____-____"
+                app:maskCharacter="_"
+                app:maskStyle="completable" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/trainingTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/training_tv"
+            android:textAlignment="center"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phoneBoxLL" />
+
+        <Spinner
+            android:id="@+id/trainingSP"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:entries="@array/training_sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/trainingTV" />
+
+        <LinearLayout
+            android:id="@+id/trainingGroupLL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/trainingSP">
+
+            <LinearLayout
+                android:id="@+id/firstTrainingLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.santalu.maskara.widget.MaskEditText
+                    android:id="@+id/trainingDateFtET"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="@string/trainingDate_et"
+                    android:inputType="number"
+                    app:mask="__/__/____"
+                    app:maskCharacter="_"
+                    app:maskStyle="completable" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secondTrainingLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.santalu.maskara.widget.MaskEditText
+                    android:id="@+id/conclusionDateStET"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="@string/conclusionDate_et"
+                    android:inputType="number"
+                    app:mask="__/__/____"
+                    app:maskCharacter="_"
+                    app:maskStyle="completable" />
+
+                <EditText
+                    android:id="@+id/institutionStET"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="@string/institution_et"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/thirdTrainingLL"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.santalu.maskara.widget.MaskEditText
+                    android:id="@+id/conclusionDateTtET"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="@string/conclusionDate_et"
+                    android:inputType="number"
+                    app:mask="__/__/____"
+                    app:maskCharacter="_"
+                    app:maskStyle="completable" />
+
+                <EditText
+                    android:id="@+id/institutionTtET"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="@string/institution_et"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/monographTitleTtET"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="@string/monographTitle_et"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+
+                <EditText
+                    android:id="@+id/supervisorTtET"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:hint="@string/supervisor_et"
+                    android:importantForAutofill="no"
+                    android:inputType="text" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/jobsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/jobs_tv"
+            android:textAlignment="center"
+            android:textColor="@color/purple_500"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/trainingGroupLL" />
+
+        <EditText
+            android:id="@+id/jobsET"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:hint="@string/jobs_et"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/jobsTV" />
+
+        <Button
+            android:id="@+id/clearBT"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:text="@string/clear_bt"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/saveBT"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/jobsET"
+            tools:ignore="TextSizeCheck" />
+
+        <Button
+            android:id="@+id/saveBT"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="24dp"
+            android:paddingHorizontal="24dp"
+            android:text="@string/save_bt"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/clearBT"
+            app:layout_constraintTop_toBottomOf="@id/jobsET"
+            tools:ignore="TextSizeCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
